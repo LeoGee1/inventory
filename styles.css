@@ -1,0 +1,73 @@
+/* base styles */
+body, a, h1, h2, p, ul, li {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: white;
+    text-decoration: none;
+}
+/* font styles */
+@font-face {
+    font-family: 'PJS';
+    src: url('fonts/PlusJakartaSans.ttf');
+}
+@font-face {
+    font-family: 'PFD';
+    src: url('fonts/PlayfairDisplay.ttf');
+}
+/* mobile styles */
+.wrapper {
+    margin: 5%;
+    padding: 5px;
+}
+.header {
+    font-family: PJS;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.fa-arrow-left-long {
+    color: rgba(0, 0, 0, 0.781);
+    font-size: 15px;
+}
+.add {
+    color:#0ae927;
+    font-weight: bolder;
+}
+.product-head h1{
+    font-family: 'PFD';
+    color: #021639;
+    margin: 25px 0;
+}
+.product-search {
+    display: flex;
+    border: 1px solid #ddd;
+    padding: 10px 0px;
+    justify-content: space-around;
+}
+.product-search input[type= text] {
+    border: none;
+}
+.product-search input[type= text]:focus{
+    outline: none;
+}
+.product-search ::placeholder {
+    font-weight: bold;
+    font-family: 'PJS';
+    font-size: 12px;
+}
+.fa-magnifying-glass {
+    color: rgba(0, 0, 0, 0.568);
+}
+
+
+
+
+
+
+
+
+/* tablet styles */
+/* small laptops styles */
+/* desktop styles */
