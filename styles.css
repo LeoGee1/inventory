@@ -21,8 +21,9 @@ body, a, h1, h2, p, ul, li {
 }
 /* mobile styles */
 .wrapper {
-    margin: 5%;
-    padding: 5px;
+    margin: 5% auto;
+    padding: 15px;
+    max-width: 980px;
 }
 .header {
     font-family: PJS;
@@ -54,12 +55,16 @@ body, a, h1, h2, p, ul, li {
     padding: 10px 0px;
     justify-content: space-between;
     background-color: white;
-    position: sticky;
-    top: 30px;
+    /* position: sticky;
+    top: 30px; */
+    max-width: 720px;
+    margin: auto;
 }
 .product-search input[type= text] {
     border: none;
     padding-left: 10px;
+    flex-basis: 100px;
+    flex-grow: 1;
 }
 .product-search input[type= text]:focus{
     outline: none;
@@ -71,7 +76,7 @@ body, a, h1, h2, p, ul, li {
 }
 .fa-magnifying-glass {
     color: rgba(0, 0, 0, 0.568);
-    padding-right: 10px;
+    padding: 2px 10px;
 }
 .product-info {
     display: grid;
@@ -102,7 +107,7 @@ body, a, h1, h2, p, ul, li {
     background-image: url('pic-folder/football-matte.png');
     background-size: contain;
     color: #ddd;
-    background-position: 25px 80px;
+    background-position: 25px 70px;
     background-repeat: no-repeat;
 }
 .three {
@@ -189,40 +194,92 @@ body, a, h1, h2, p, ul, li {
 
 /* tablet styles */
 @media screen and (min-width: 480px) and (max-width: 720px) {
+    .product-search ::placeholder {
+        font-size: 14px;
+    }
     .product-cat{
         margin: 30px 0;
+        font-size: 40px;
     }
     .pro::after {
         white-space: nowrap;
     }
     .three {
-        background-position: 0px 10px;
-        height: 140px;
-        display: flex;
-        justify-content: space-between;
+        background-position: 0px -70px;
+        height: 160px;
     }
 }
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* small laptops styles */
-/* desktop styles */
+@media screen and (min-width: 720px) {
+    .product-info {
+        grid-template-columns: repeat(9, 1fr);
+        margin: 25px 0;
+        gap: 15px;
+    }
+    .fa-arrow-left-long {
+        color: rgba(0, 0, 0, 0.781);
+        font-size: 25px;
+    }
+    .add {
+        color:#0ae927;
+        font-weight: bolder;
+        font-size: 18px;
+    }
+    .product-cat{
+        margin: 30px 0;
+        font-size: 60px;
+        text-align: center;
+    }
+    .pro::after {
+        white-space: nowrap;
+    }
+    .product-search ::placeholder {
+        font-size: 16px;
+    }
+    .one {
+        grid-column: 1/4;
+        height: 250px;
+        background-size: 180px;
+        background-position: 25px 70px;
+        background-repeat: no-repeat;
+        color: #021639;
+    }
+    .two {
+        grid-column: 4/7;
+        height: 250px;
+        background-size: 220px;
+        color: #ddd;
+        background-position: 25px 70px;
+        background-repeat: no-repeat;
+    }
+    .three {
+        grid-column: 7/10;
+        background-color: #1bbd31;
+        background-image: url('pic-folder/basketball.png');
+        background-size: cover;
+        background-position: 0px 15px;
+        height: 250px;
+    }
+    .high {
+        background-color: #FF7A00;
+        padding: 5px;
+        margin: 7px;
+        height: 15px;
+        font-family: 'PFD';
+        font-size: 12px; 
+    }
+    .four {
+        grid-column: span 5;
+        background-position: 20px 60px;
+        background-size: 150px;
+        background-repeat: no-repeat;
+    }
+    .five {
+        color: rgb(136, 14, 14);
+        background-color: #ddd;
+        background-image: url('pic-folder/baseball.png');
+        background-size: 120px;
+        background-repeat: no-repeat;
+        background-position: 0px 50px;
+    }
+}
