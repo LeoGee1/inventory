@@ -55,10 +55,11 @@ body, a, h1, h2, p, ul, li {
     padding: 10px 0px;
     justify-content: space-between;
     background-color: white;
-    /* position: sticky;
-    top: 30px; */
     max-width: 720px;
     margin: auto;
+}
+.product-search:hover {
+    border-bottom: 3px solid #021639a8;
 }
 .product-search input[type= text] {
     border: none;
@@ -86,13 +87,42 @@ body, a, h1, h2, p, ul, li {
 }
 .balls {
     grid-column: span 4;
-    /* border: 1px solid red; */
     height: 170px;
+    position: relative;
+}
+.balls:hover {
+    border: 1px solid #021639;
+    transition: 0.3s;
+    transform: scale(0.97);
 }
 .balls h3 {
     font-family: 'PJS';
     font-size: 12px;
     padding-left: 10px;
+}
+.plus {
+    font-size: 20px;
+    margin: 0px 10px;
+    cursor: pointer;
+    padding: 5px;
+}
+.fa-xmark {
+    position: absolute;
+    font-size: 16px;
+    color: rgb(77, 76, 76);
+    top: 5%;
+    left: 85%;
+    visibility: hidden;
+}
+.basket {
+    position: absolute;
+    font-size: 16px;
+    color: rgb(77, 76, 76);
+    top: 35px;
+    left: 90%;
+}
+.baller:hover ~ .fa-xmark {
+    visibility: visible;
 }
 .one {
     background-color: #ddd;
@@ -110,6 +140,7 @@ body, a, h1, h2, p, ul, li {
     background-position: 25px 70px;
     background-repeat: no-repeat;
 }
+
 .three {
     color: #ddd;
     grid-column: 1/9;
@@ -128,13 +159,14 @@ body, a, h1, h2, p, ul, li {
     height: 15px;
     font-family: 'PFD';
     font-size: 12px; 
+    white-space: nowrap;
 }
 .four {
     color: #021639;
     background-color: #FF7A00;
     background-image: url('pic-folder/tennisball.png');
-    background-position: 20px 60px;
-    background-size: 150px;
+    background-position: 10px 40px;
+    background-size: 130px;
     background-repeat: no-repeat;
 }
 .five {
@@ -236,6 +268,10 @@ body, a, h1, h2, p, ul, li {
     .product-search ::placeholder {
         font-size: 16px;
     }
+    .balls h3 {
+        font-size: 16px;
+        padding-left: 15px;
+    }
     .one {
         grid-column: 1/4;
         height: 250px;
@@ -254,10 +290,9 @@ body, a, h1, h2, p, ul, li {
     }
     .three {
         grid-column: 7/10;
-        background-color: #1bbd31;
-        background-image: url('pic-folder/basketball.png');
-        background-size: cover;
-        background-position: 0px 15px;
+        background-size: 220px;
+        background-position: 0px 45px;
+        background-repeat: no-repeat;
         height: 250px;
     }
     .high {
@@ -270,16 +305,14 @@ body, a, h1, h2, p, ul, li {
     }
     .four {
         grid-column: span 5;
-        background-position: 20px 60px;
-        background-size: 150px;
+        background-position: 20px 40px;
+        background-size: 160px;
         background-repeat: no-repeat;
+        height: 200px;
     }
     .five {
-        color: rgb(136, 14, 14);
-        background-color: #ddd;
-        background-image: url('pic-folder/baseball.png');
-        background-size: 120px;
-        background-repeat: no-repeat;
-        background-position: 0px 50px;
+        background-size: 150px;
+        background-position: 20px 50px;
+        height: 200px;
     }
 }
