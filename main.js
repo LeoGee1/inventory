@@ -12,9 +12,23 @@ list.addEventListener('mouseover', function(e){
    
 // removing it when not more on hover
 
-//removing the items
+//deleting items
 list.addEventListener('click', function(e){
-    if(e.target.className ===  'fa-solid fa-xmark'){
+    if(e.target.className ===  'fa-solid fa-xmark' || e.target.className === 'fa-solid fa-xmark basket'){
          e.target.parentElement.style.display = 'none'
+    }
+})
+// items list appearance & dissapearance
+const page = document.querySelector('#main')
+const upper = document.querySelector('#head')
+
+upper.addEventListener('click', function(e){
+    if(e.target.className === 'add'){
+        e.target.parentElement.nextElementSibling.firstElementChild.style.visibility = 'visible'
+    }
+})
+page.addEventListener('click', function(e){
+    if(e.target.className === 'fa-solid fa-window-minimize') {
+        e.target.parentElement.parentElement.style.visibility ='hidden'
     }
 })

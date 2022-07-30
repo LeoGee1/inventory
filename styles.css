@@ -5,6 +5,7 @@ body, a, h1, h2, p, ul, li {
     box-sizing: border-box;
     background-color: white;
     text-decoration: none;
+    list-style-type: none;
 }
 /* font styles */
 @font-face {
@@ -38,6 +39,52 @@ body, a, h1, h2, p, ul, li {
 .add {
     color:#0ae927;
     font-weight: bolder;
+    cursor: pointer;
+}
+.add:hover {
+    color: #021639;
+}
+.hidden-list{
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    font-family: 'PJS';
+    border: 1px solid #021639;
+    visibility: hidden;
+}
+.hidden-head {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #021639;
+    font-size: 10px;
+    background-color: #021639;
+}
+.h-your {
+    font-size: large;
+    margin: 10px 5px;
+    background-color: #021639;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 100;
+}
+.fa-window-minimize {
+    font-size: 13px;
+    padding: 10px;
+    color: #ddd;
+}
+.fa-window-minimize:hover {
+    color: #FF7A00;
+}
+.h-balls {
+   
+    font-size: 14px;
+    padding: 6px 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.h-balls:hover {
+    background-color: #02163944;
+     border-bottom: 1px solid #ddd;
 }
 .product-cat{
     font-family: 'PFD';
@@ -113,6 +160,9 @@ body, a, h1, h2, p, ul, li {
     top: 5%;
     left: 85%;
     visibility: hidden;
+}
+.fa-xmark:hover {
+    color: rgb(155, 9, 9);
 }
 .basket {
     position: absolute;
@@ -241,8 +291,44 @@ body, a, h1, h2, p, ul, li {
         height: 160px;
     }
 }
-/* small laptops styles */
+/* small laptops styles and desktops */
 @media screen and (min-width: 720px) {
+    .hidden-list{
+        right: 14%;
+        top: 10%;
+        border: 2px solid #021639;
+        position: absolute;
+        z-index: 1;
+    }
+    .hidden-head {
+        background-color: #021639;
+    }
+    .h-your {
+        font-size: 24px;
+        margin: 15px 5px;
+        letter-spacing: 1px;
+        font-weight: 100;
+    }
+    .fa-window-minimize {
+        font-size: 16px;
+        padding: 10px;
+        margin: 5px;
+        color: #ddd;
+    }
+    .fa-window-minimize:hover {
+        color: #FF7A00;
+    }
+    .h-balls {
+        font-size: 16px;
+        text-align: center;
+        padding: 10px 5px;
+        cursor: pointer;
+        font-weight: 600;
+    }
+    .h-balls:hover {
+        background-color: #02163944;
+         border-bottom: 1px solid #ddd;
+    }
     .product-info {
         grid-template-columns: repeat(9, 1fr);
         margin: 25px 0;
