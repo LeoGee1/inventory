@@ -28,7 +28,32 @@ upper.addEventListener('click', function(e){
     }
 })
 page.addEventListener('click', function(e){
-    if(e.target.className === 'fa-solid fa-window-minimize') {
+    if(page && e.target.className === 'fa-solid fa-window-minimize') {
         e.target.parentElement.parentElement.style.visibility ='hidden'
     }
 })
+
+// adding elements to the html
+const addball = document.querySelectorAll('.plus')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
