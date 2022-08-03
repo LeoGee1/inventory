@@ -206,8 +206,21 @@ addballs.addEventListener('submit', function(e) {
     // e.target.reset
 })
 
+const hidden = document.querySelector('#hidden-list')
+const dots = document.querySelector('#hide i')
 
+hidden.addEventListener('click', function(e) {
+    if(e.target.className === 'fa-solid fa-ellipsis') {
+        e.target.parentElement.parentElement.nextElementSibling.style.display = 'flex'
 
+    }
+})
+hidden.addEventListener('dblclick', function(e) {
+    if(e.target.className === 'fa-solid fa-ellipsis') {
+        e.target.parentElement.parentElement.nextElementSibling.style.display = 'none'
+
+    }
+})
 
 
 

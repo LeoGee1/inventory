@@ -48,6 +48,7 @@ body, a, h1, h2, p, ul, li {
     color: #021639;
 }
 .hidden-list{
+    z-index: 1;
     position: absolute;
     right: 5%;
     top: 5%;
@@ -79,7 +80,6 @@ body, a, h1, h2, p, ul, li {
     color: #FF7A00;
 }
 .h-balls {
-   
     font-size: 14px;
     padding: 6px 5px;
     cursor: pointer;
@@ -88,6 +88,35 @@ body, a, h1, h2, p, ul, li {
 .h-balls:hover {
     background-color: #02163944;
      border-bottom: 1px solid #ddd;
+}
+.fa-ellipsis {
+    padding-left: 20px;
+    text-align: right;
+    color: rgb(121, 119, 119);
+}
+.fa-ellipsis:hover {
+    color: #021639;
+}
+.dot-action {
+    display: none;
+    justify-content: center;
+    margin: 5px;
+}
+.btn {
+    height: 20px;
+    width: 30px;
+    font-size: 17px;
+    font-family: 'PJS';
+    display: flex;
+    border: 1px solid #ddd;
+    align-items: center;
+    justify-content: center;
+}
+.decrease {
+    padding: 2px;
+}
+.display {
+    padding: 10px;
 }
 .product-cat{
     font-family: 'PFD';

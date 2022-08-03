@@ -15,16 +15,51 @@
             <div class="add">Added Items</div>
         </header>
         <main id="main">
-            <ul class="hidden-list">
+            <ul class="hidden-list" id="hidden-list">
                 <div class="hidden-head">
                     <h2 class="h-your">Your List</h2>
                     <i class="fa-solid fa-window-minimize"></i>
                 </div>
-                <li  class="h-balls G">Green Ball</li>
-                <li class="h-balls">White Ball</li>
-                <li class="h-balls">Basketball</li>
-                <li class="h-balls">Tennis Ball</li>
-                <li class="h-balls">Baseball</li>
+                <div id="hide">
+                    <li  class="h-balls G">Green Ball <span><i class="fa-solid fa-ellipsis"></i></span></li>
+                    <div class="dot-action" id="dot-action">
+                        <button class=" btn decrease" id="decrease">-</button>
+                         <span class="display" id="display"></span>
+                        <button class="btn increase" id="increase">+</button>
+                    </div>
+                </div>
+                <div>
+                    <li  class="h-balls G">White Ball <span><i class="fa-solid fa-ellipsis" id="dot"></i></span></li>
+                    <div class="dot-action" id="dot-action">
+                        <button class=" btn decrease" id="decrease">-</button>
+                         <span class="display" id="display"></span>
+                        <button class="btn increase" id="increase">+</button>
+                    </div>
+                </div>
+                <div>
+                    <li  class="h-balls G">Basketball <span><i class="fa-solid fa-ellipsis" id="dot"></i></span></li>
+                    <div class="dot-action" id="dot-action">
+                        <button class=" btn decrease" id="decrease">-</button>
+                         <span class="display" id="display"></span>
+                        <button class="btn increase" id="increase">+</button>
+                    </div>
+                </div>
+                <div>
+                    <li  class="h-balls G">Tennis Ball <span><i class="fa-solid fa-ellipsis" id="dot"></i></span></li>
+                    <div class="dot-action" id="dot-action">
+                        <button class=" btn decrease" id="decrease">-</button>
+                         <span class="display" id="display"></span>
+                        <button class="btn increase" id="increase">+</button>
+                    </div>
+                </div>
+                <div>
+                    <li  class="h-balls G">Baseball <span><i class="fa-solid fa-ellipsis" id="dot"></i></span></li>
+                    <div class="dot-action" id="dot-action">
+                        <button class=" btn decrease" id="decrease">-</button>
+                         <span class="display" id="display"></span>
+                        <button class="btn increase" id="increase">+</button>
+                    </div>
+                </div>
             </ul>
             <div class="product-head" id="product-head1">
                 <h1 class="product-cat"> <span class="pro">Product </span><span>Catalogue</span></h1>
