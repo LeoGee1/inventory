@@ -106,17 +106,20 @@ body, a, h1, h2, p, ul, li {
     height: 20px;
     width: 30px;
     font-size: 17px;
-    font-family: 'PJS';
+    cursor: pointer;
     display: flex;
     border: 1px solid #ddd;
     align-items: center;
     justify-content: center;
 }
-.decrease {
-    padding: 2px;
+.btn:active {
+    background-color: grey;
 }
+
 .display {
-    padding: 10px;
+    padding: 0px 5px;
+    font-weight: 600;
+    font-size: 14px;
 }
 .product-cat{
     font-family: 'PFD';

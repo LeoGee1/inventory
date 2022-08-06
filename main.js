@@ -1,5 +1,4 @@
 const list = document.querySelector('#product-info1');
-const items = document.querySelectorAll('#ballers');
 const cancel = document.querySelectorAll('.fa-xmark');
 const ballWord = document.querySelectorAll('.word');
 
@@ -28,16 +27,22 @@ upper.addEventListener('click', function(e){
     }
 })
 page.addEventListener('click', function(e){
-    if(page && e.target.className === 'fa-solid fa-window-minimize') {
-        e.target.parentElement.parentElement.style.visibility ='hidden'
+    if(e.target.className === 'fa-solid fa-window-minimize') {
+        e.target.parentElement.parentElement.style.visibility ='hidden'    
     }
 })
 
 // adding elements to the html
 
 const addballs = document.forms['product-add1'] 
-// greenball
-addballs.addEventListener('submit', function(e) {
+// greenball input increment
+const incGreen = document.querySelector('.inc-green')
+const descGreen = document.querySelector('.desc-green')
+const disGreen = document.querySelector('.disp-green')
+
+let data = 1
+
+const dataInputG = (e) =>{
     e.preventDefault()
 
     const value = document.querySelector('input[type="text"]').value.trim()
@@ -45,13 +50,15 @@ addballs.addEventListener('submit', function(e) {
         return
     }else if (value !== 'green ball') {
         return
-    }
+    }else if (data < 5){
+        data++
+        disGreen.innerText = data
+    
     
     // create green elements
     const greenball = document.createElement('div');
     const ballname = document.createElement('h3');
     const deleteball = document.createElement('i');
-
 
     //add text contents
     ballname.textContent = value
@@ -60,15 +67,48 @@ addballs.addEventListener('submit', function(e) {
     //adding classes
     greenball.classList.add('balls', 'one');
     deleteball.classList.add('fa-solid', 'fa-xmark')
-
    
     //append each to each
-
     greenball.appendChild(ballname);
     greenball.appendChild(deleteball);
     list.appendChild(greenball);
-    // e.target.reset
-})
+    }   
+}
+
+addballs.addEventListener('submit', dataInputG)
+
+
+// green ball buttton increment
+const dataLimit = () =>{
+     if (data < 5){
+        data++
+        disGreen.innerText = data
+     
+     // create green elements
+     const greenball = document.createElement('div');
+     const ballname = document.createElement('h3');
+     const deleteball = document.createElement('i');
+
+     //add text contents
+     ballname.textContent = 'green ball';
+
+     //adding classes
+     greenball.classList.add('balls', 'one');
+     deleteball.classList.add('fa-solid', 'fa-xmark');
+
+     //append each to each
+     greenball.appendChild(ballname);
+     greenball.appendChild(deleteball);
+     list.appendChild(greenball);
+     }
+}
+
+     incGreen.addEventListener('click', dataLimit)
+// green ball X- button decrement 
+if(data > 1) {
+    data--
+}   
+
 
 // white balls
 addballs.addEventListener('submit', function(e) {
@@ -207,7 +247,7 @@ addballs.addEventListener('submit', function(e) {
 })
 
 const hidden = document.querySelector('#hidden-list')
-const dots = document.querySelector('#hide i')
+// const dots = document.querySelector('#hide i')
 
 hidden.addEventListener('click', function(e) {
     if(e.target.className === 'fa-solid fa-ellipsis') {
@@ -218,12 +258,5 @@ hidden.addEventListener('click', function(e) {
 hidden.addEventListener('dblclick', function(e) {
     if(e.target.className === 'fa-solid fa-ellipsis') {
         e.target.parentElement.parentElement.nextElementSibling.style.display = 'none'
-
     }
 })
-
-
-
-
-
-
