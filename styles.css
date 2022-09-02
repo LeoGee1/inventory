@@ -382,6 +382,7 @@ body, a, h1, h2, p, ul, li {
          border-bottom: 1px solid #ddd;
     }
     .product-info {
+        /* max-width: 980px; */
         grid-template-columns: repeat(9, 1fr);
         margin: 25px 0;
         gap: 15px;
@@ -406,12 +407,15 @@ body, a, h1, h2, p, ul, li {
     .product-search ::placeholder {
         font-size: 16px;
     }
+    .balls{
+        grid-column: span 3;
+    }
     .balls h3 {
         font-size: 16px;
         padding-left: 15px;
     }
     .one {
-        grid-column: 1/4;
+       
         height: 250px;
         background-size: 180px;
         background-position: 25px 70px;
@@ -419,7 +423,6 @@ body, a, h1, h2, p, ul, li {
         color: #021639;
     }
     .two {
-        grid-column: 4/7;
         height: 250px;
         background-size: 220px;
         color: #ddd;
@@ -427,7 +430,6 @@ body, a, h1, h2, p, ul, li {
         background-repeat: no-repeat;
     }
     .three {
-        grid-column: 7/10;
         background-size: 220px;
         background-position: 0px 45px;
         background-repeat: no-repeat;
@@ -442,13 +444,14 @@ body, a, h1, h2, p, ul, li {
         font-size: 12px; 
     }
     .four {
-        grid-column: span 5;
+        grid-column: span 4;
         background-position: 20px 40px;
         background-size: 160px;
         background-repeat: no-repeat;
         height: 200px;
     }
     .five {
+        grid-column: span 5;
         background-size: 150px;
         background-position: 20px 50px;
         height: 200px;
