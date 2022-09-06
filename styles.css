@@ -125,6 +125,7 @@ body, a, h1, h2, p, ul, li {
     font-family: 'PFD';
     color: #021639;
     margin: 25px 0;
+    cursor: default;
 }
 .pro::after {
     content: '\a';
