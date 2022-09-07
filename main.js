@@ -96,7 +96,7 @@
             //append each to each
             greenball.appendChild(ballname);
             greenball.appendChild(deleteball);
-            list.appendChild(greenball)
+            list.appendChild(greenball);
 
             localStorage.setItem('disBaseCountGreenball', dataG);
             }
@@ -127,7 +127,7 @@
 
     //green ball X decrement
     list.addEventListener('click', function(e){
-        if(dataG >1 && e.target.className ===  'fa-solid fa-xmark' /**|| e.target.className === 'fa-solid fa-xmark basket'**/){
+        if(dataG > 1 && e.target.className ===  'fa-solid fa-xmark' /**|| e.target.className === 'fa-solid fa-xmark basket'**/){
             dataG--;
             disGreen.innerText = dataG;
             e.target.parentElement.style.display = 'none';
@@ -210,11 +210,6 @@
     };
     const disBaseCountWhiteball =  localStorage.getItem('disBaseCountWhiteball');
 
-    if(disBaseCountWhiteball !== null){
-        for(i=1; i < parseInt(disBaseCountWhiteball, 10); i++){
-            dataLimitW();
-        }
-    }
 
     incWhite.addEventListener('click', dataLimitW);
 
@@ -230,18 +225,26 @@
                 localStorage.setItem('disBaseCountWhiteball', dataW);
             }               
         };
+        
     decWhite.addEventListener('click', decreW);
 
     //White ball X decrement
     list.addEventListener('click', function(e){
 
-        if(dataW >1 && e.target.className ===  'fa-solid fa-xmark' /**|| e.target.className === 'fa-solid fa-xmark basket'**/){
+        if(dataW > 1 && e.target.className ===  'fa-solid fa-xmark'){
             dataW--
             dispWhite.innerText = dataW
             e.target.parentElement.style.display = 'none'
             localStorage.setItem('disBaseCountWhiteball', dataW);
         }  
     });
+
+    
+    if(disBaseCountWhiteball !== null){
+        for (let i = 1; i < parseInt(disBaseCountWhiteball, 10); i++) {
+            dataLimitW();
+        }
+    }
 
     // Basketball
     const incBasket = document.querySelector('.inc-basket');
@@ -550,11 +553,7 @@
     incBase.addEventListener('click', dataLimitBB);
     const disBaseCount = localStorage.getItem('disBaseCount');
 
-    if (disBaseCount !== null){
-        for (let i = 1; i < parseInt(disBaseCount, 10); i++) {
-            dataLimitBB();
-        };
-    };
+    
 
     // baseball button decrement 
     const decreBB = () =>{
@@ -582,6 +581,11 @@
         }  
     });
 
+    if (disBaseCount !== null){
+        for (let i = 1; i < parseInt(disBaseCount, 10); i++) {
+            dataLimitBB();
+        };
+    };
 
     const hidden = document.querySelector('#hidden-list');
     const dots = document.querySelector('#hide i');
